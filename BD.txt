@@ -1,0 +1,16 @@
+CREATE DATABASE likeme;
+
+\c likeme
+
+CREATE TABLE posts (id SERIAL, usuario VARCHAR(25), url VARCHAR(1000),
+descripcion VARCHAR(255), likes INT);
+
+INSERT INTO posts (usuario, url, descripcion, likes) VALUES 
+('john_doe', 'https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWRqb292c2hycDQ5cGZxdmNncjF6bm1razZkY2lhN2hlZTg2NnEyYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KHUrQZ1xouiv6/giphy.webp', 'This is the first post description', 100),
+('jane_smith', 'https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWkwYmdxMGtrcTJ4MjB0ZmNoYXl3cGt3NnUzNGo1MXR5ZDI2bnA5bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ExMGjbktr4phe/giphy.webp', 'Here is another interesting post', 150),
+('alice_jones', 'https://static01.nyt.com/images/2016/11/01/well/mind/well_MIRL_cat/well_MIRL_cat-articleLarge-v2.gif?quality=75&auto=webp&disable=upscale', 'Check out this awesome post', 200),
+('bob_brown', 'https://miro.medium.com/v2/resize:fit:1400/1*5f7gVeiRNueibqA5LEj5NQ.gif', 'A great post about technology', 250),
+('james_graham', 'https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTU5dnpzczBuamxraHhxc2oxdWY2bHByZGExY3hhY3lnajZldTRweSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8vQSQ3cNXuDGo/giphy.webp', 'Here is another interesting post', 150),
+('lupita_contreras', 'https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExODNlNzhpOGQ5aXFweGFnZGswenQ3OTkwOG80dDhzNjZjanl1ZjBmZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/H4DjXQXamtTiIuCcRU/giphy.webp', 'Check out this awesome post', 200),
+('didi_piña', 'https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmJjMmluejM2YWJ5bGcwc2xqdTl2a2JxaHFyMXhwM3VpZXMwYXFrZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8Ag4AORS8xPYHdeU6f/giphy.webp', 'A great post about technology', 250),
+('ster_ster', 'https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2VoZnBhYWxidzAxZHBscjlpZzk3anVhdmpzaHR6cTZkMXh1Z2JzOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6VoDJzfRjJNbG/giphy.webp', 'Insights on the latest trends', 300);
