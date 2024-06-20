@@ -12,6 +12,7 @@ $(document).ready(function () {
     });
     $("#creado").removeClass("d-none");
     getPosts();}
+    limpiarDatos();
   });
 });
 // window.onload = getPosts();
@@ -81,10 +82,14 @@ function validarDatos(usuario, url, descripcion) {
   } else if (!urlRegex.test(url.trim())) {
     toastAlert("La URL ingresada no es válida");
     return false;
+  } else if (usuario.length > 25) {
+    toastAlert("El nombre de usuario debe tener menos de 25 caracteres");
+    return false;
   }
   
   return true;
 }
+
 function toastAlert(message) {
   $("#toastContainer").empty();
   const toast = `<div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="5000">
@@ -100,4 +105,9 @@ function toastAlert(message) {
   $("#toastContainer").append(toast);
   $(".toast").toast("show");
   $("#exampleModal").modal("hide");
+}
+function limpiarDatos(){
+  $("form:first input:first").val('');
+  $("form:first input:last").val('');
+  $("form:first textarea").val('');
 }
