@@ -1,0 +1,35 @@
+body {
+    background: #f1f1f1;
+  }
+
+  form {
+    padding: 15px;
+    background: #0d47a1;
+    color: white;
+  }
+
+  .card-body {
+    background: #e1e2e1;
+  }
+
+  #creado {
+    background: #002b55;
+  }
+
+  .card {
+    background: transparent !important;
+    border: none !important;
+  }
+  #toastContainer {
+    position: fixed;
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1050;
+  }
+  
+  .toast {
+    min-width: 300px;
+    color: black;
+    background-color: cornflowerblue;
+  }
