@@ -12,3 +12,6 @@
 2. La Base de datos es llamada "likeme", la cual será borrada en caso de existencia y creada junto a su tabla "posts".
 3. En el proyecto modificar parámetros de conexión a la BD según sea tú caso.
 La Base de datos cuenta con varios datos predeterminados para poder realizar pruebas.
+
+## Ejecución
+1. En el terminal del proyecto, ejecutar node server.
